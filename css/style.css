@@ -233,11 +233,50 @@
 
 #chat {
  height: calc(100% - 140px);
- background-image: url("../img/sfondo.jpeg");
+ background-image: url("../img/sfondo.png");
  background-repeat: no-repeat;
+ background-size: cover;
 }
 
 #messaggio {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   height: 70px;
-  background-color: red;
+  background-color: #EAEAEA;
+}
+
+#messaggio i {
+  font-size: 20px;
+}
+
+.inserimento {
+  height: 50px;
+  width: 500px;
+}
+
+.messaggio-utente {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.messaggio-verde {
+  padding: 10px;
+  margin: 10px;
+  background-color: #D3F7B8;
+  border-radius: 10px;
+}
+
+.messaggio-interlocutore {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.messaggio-bianco {
+  padding: 10px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
 }
