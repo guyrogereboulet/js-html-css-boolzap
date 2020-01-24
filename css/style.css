@@ -280,3 +280,7 @@
   background-color: white;
   border-radius: 10px;
 }
+
+.template {
+  display: none;
+}
