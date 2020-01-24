@@ -1,11 +1,7 @@
 $(document).ready (function(){
   $("#invia").click(function (){
-
     sendMessage();
-
   });
-
-
 });
 
 
@@ -17,7 +13,5 @@ function sendMessage() {
     console.log(newMessage);
     newMessage.find(".messaggio-verde").text(textMessage);
     $("#chat").append(newMessage);
-
   }
-
 }

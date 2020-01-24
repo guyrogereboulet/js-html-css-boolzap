@@ -4,39 +4,37 @@
   box-sizing: border-box;
 }
 
-.background {
-  position: relative;
-  z-index: -1;
+body {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background-color: #D5D8D3;
+  min-width: 1300px;
 }
 
-.background-top {
-  width: 100%;
-  height: 100px;
-  background-color: #00BDA4;
-}
 
 .wrapper {
-  display: flex;
-  position: fixed;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 950px;
+  width: 60%;
   height: 750px;
   margin: 0 auto;
   background-color: white;
 }
 
+.wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .wrapper-left {
-  width: calc(100% - 600px);
+  width: 30%;
   height: 100%;
 }
 
 .wrapper-right {
-  width: 600px;
   height: 100%;
 }
 
@@ -47,7 +45,6 @@
 
 
 #utente {
- width: calc(100% - 600px);
  height: 70px;
  width: 100%;
  border-right: 1px solid lightgrey;
@@ -174,6 +171,8 @@
 
  #contatti {
   background-color: #FAFAFA;
+  overflow-y: scroll;
+  height: 570px;
  }
 
  #contatti li {
@@ -217,7 +216,7 @@
 
 
 #chat-utente {
- width: 600px;
+ width: 100%;
  height: 70px;
  border-right: 1px solid lightgrey;
  background-color: #EAEAEA;
