@@ -5,7 +5,7 @@ $(document).ready (function(){
 });
 
 
-
+//FUNZIONE INVIO MESSAGGI
 function sendMessage() {
   var textMessage = $("input.inserimento").val();
   console.log(textMessage);
@@ -17,18 +17,18 @@ function sendMessage() {
   }
 }
 
-
+//FUNZIONE FILTRO DI RICERCA
 function filter () {
-  var filterValue, input, ul ,li, i;
+  var filterValue, input, ul,li,span,i;
   input = document.getElementById('ricerca');
   filterValue = input.value.toUpperCase();
   ul = document.getElementById('contatti');
   li = ul.getElementsByTagName('li');
 
-  for (var i = 0; i < li.length; i++) {
-    var a = li[i].getElementsByTagName('p') [0];
-    if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
-      li[i].style.direction = "";
+  for (i = 0; i < li.length; i++) {
+    var span = li[i].getElementsByTagName('span')[0];
+    if(span.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+      li[i].style.display = "";
     }else {
       li[i].style.display = "none";
     }
