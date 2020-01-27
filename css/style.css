@@ -281,6 +281,18 @@ body {
   border-radius: 10px;
 }
 
+.messaggio-verde::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.message-right {
+  font-size: 10px;
+  margin-left: 5px;
+  text-align: right;
+}
+
 .messaggio-interlocutore {
   display: flex;
   flex-direction: column;
