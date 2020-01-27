@@ -315,6 +315,10 @@ body {
   align-items: flex-end;
 }
 
-.display-none {
+.contenitore-messaggi.active {
+  display: block;
+}
+
+.contenitore-messaggi {
   display: none;
 }
