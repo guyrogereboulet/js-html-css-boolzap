@@ -3,11 +3,10 @@ $(document).ready (function(){
     sendMessage();
   });
   $("#contatti ul li").click(function(){
-    var thisPosition = $(this).index();
-    var contact = $("data-contact").eq(thisPosition);
-    console.log($(this).index());
-    $("data-contact").removeClass(".active");
-    $(this).addClass(".active");
+    var conversazione = $(this).attr("data-conversazione");
+    var pannelloConversazione = $(".contenitore-messaggi[data-contact=" + conversazione + ']');
+    $(".contenitore-messaggi").removeClass("active");
+    pannelloConversazione.addClass("active")
   });
 });
 
