@@ -2,8 +2,14 @@ $(document).ready (function(){
   $("#invia").click(function (){
     sendMessage();
   });
+  $("#contatti ul li").click(function(){
+    console.log($(this).index());
+  });
 });
 
+
+
+//---------------FUNZIONI---------------//
 
 //FUNZIONE INVIO MESSAGGI
 function sendMessage() {
@@ -14,15 +20,15 @@ function sendMessage() {
     console.log(newMessage);
     newMessage.find(".message-left").text(textMessage);
     $("#chat").append(newMessage);
+    setTimeout(sendResponse, 3000);
   }
 }
 
 //FUNZIONE RISPOSTA AUTOMATICA
-// ●	Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
-
-setTimeout(myFunction, 3000);
- function myFunction() {
- // alert('Hello');
+ function sendResponse() {
+   var messageResponse = $(".template .messaggio-interlocutore").clone();
+   messageResponse.find(".message-left").text("ok");
+   $("#chat").append(messageResponse);
  }
 
 //FUNZIONE FILTRO DI RICERCA

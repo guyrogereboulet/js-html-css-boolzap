@@ -314,3 +314,7 @@ body {
   justify-content: flex-start;
   align-items: flex-end;
 }
+
+.display-none {
+  display: none;
+}
