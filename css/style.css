@@ -12,13 +12,13 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #D5D8D3;
-  min-width: 1300px;
+  font-family: 'Lato', sans-serif;
 }
 
 
 .wrapper {
   width: 60%;
-  height: 750px;
+  height: 90%;
   margin: 0 auto;
   background-color: white;
 }
@@ -35,6 +35,7 @@ body {
 }
 
 .wrapper-right {
+  width: 70%;
   height: 100%;
 }
 
@@ -48,6 +49,7 @@ body {
  height: 70px;
  width: 100%;
  border-right: 1px solid lightgrey;
+ background-color: #EAEAEA;
 }
 
 
@@ -106,12 +108,22 @@ body {
 
 
 #ricezione {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #8EDAFC;
   height: 70px;
   width: 100%;
   padding-top: 10px;
   padding-left: 10px;
  }
+
+
+ #ricezione p {
+   font-size: 12px;
+  }
+
+
 
 #ricezione::after {
   content: "";
@@ -172,7 +184,7 @@ body {
  #contatti {
   background-color: #FAFAFA;
   overflow-y: scroll;
-  height: 570px;
+  height: calc(100% - 180px);
  }
 
  #contatti li {
@@ -235,6 +247,7 @@ body {
  background-image: url("../img/sfondo.png");
  background-repeat: no-repeat;
  background-size: cover;
+ overflow-y: scroll;
 }
 
 #messaggio {
@@ -270,7 +283,9 @@ body {
 
 .messaggio-interlocutore {
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .messaggio-bianco {

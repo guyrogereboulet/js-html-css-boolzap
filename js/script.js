@@ -17,6 +17,14 @@ function sendMessage() {
   }
 }
 
+//FUNZIONE RISPOSTA AUTOMATICA
+// ●	Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
+
+setTimeout(myFunction, 3000);
+ function myFunction() {
+ // alert('Hello');
+ }
+
 //FUNZIONE FILTRO DI RICERCA
 function filter () {
   var filterValue, input, ul,li,span,i;
