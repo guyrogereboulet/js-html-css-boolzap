@@ -12,7 +12,7 @@ function sendMessage() {
   if (textMessage.length != 0) {
     var newMessage = $(".template .messaggio-utente").clone();
     console.log(newMessage);
-    newMessage.find(".messaggio-verde").text(textMessage);
+    newMessage.find(".message-left").text(textMessage);
     $("#chat").append(newMessage);
   }
 }
