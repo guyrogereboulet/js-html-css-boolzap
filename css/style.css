@@ -187,7 +187,7 @@ body {
   height: calc(100% - 180px);
  }
 
- #contatti li {
+ .contact-element {
    list-style: none;
    width: 97%;
    border-right: 1px solid lightgrey;
@@ -195,16 +195,12 @@ body {
    height: 70px;
  }
 
- #contatti  ul li:hover {
-   list-style: none;
-   width: 97%;
-   border-right: 1px solid lightgrey;
-   background-color: lightgrey;
-   height: 70px;
- }
-
- #contatti  ul  li:hover p {
-   color: white;
+ .contact-element.active,
+ .contact-element:hover,
+ .contact-element:active,
+ .contact-element:focus {
+   background-color: grey;
+   cursor: pointer;
  }
 
 

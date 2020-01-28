@@ -8,11 +8,24 @@ $(document).ready (function(){
     }
   });
 
-  $("#contatti ul li").click(function(){
+  $(document).on('click', '.contact-element', function(){
     var conversazione = $(this).attr("data-conversazione");
     var pannelloConversazione = $('.contenitore-messaggi[data-contact="' + conversazione + '"]');
     $(".contenitore-messaggi").removeClass("active");
-    pannelloConversazione.addClass("active")
+    pannelloConversazione.addClass("active");
+    $(".contact-element").removeClass("active");
+    $(this).addClass("active");
+
+    var name = $(this).find(".contact-name").text();
+    var time = $(this).find(".ora p").text();
+    var img = $(this).find(".avatar-grey").attr("src");
+    console.log(img);
+
+    $("#chat-utente .float-left .avatar-grey").attr("src", img);
+    $("#chat-utente .contact-name").text(name);
+    $("#chat-utente .contact-time").text(time);
+
+
   });
 });
 
