@@ -30,6 +30,7 @@ function sendMessage() {
     newMessage.find(".message-time").text(time);
 
     $(".contenitore-messaggi.active").append(newMessage);
+    scrollMessage();
     setTimeout(sendResponse, 3000);
   }
 }
@@ -45,6 +46,7 @@ function sendMessage() {
    var time = hours +':'+ minutes;
    messageResponse.find(".message-time").text(time);
    $(".contenitore-messaggi.active").append(messageResponse);
+   scrollMessage();
  }
 
 //FUNZIONE FILTRO DI RICERCA
@@ -63,6 +65,15 @@ function filter () {
       li[i].style.display = "none";
     }
   }
+}
+
+// FUZIONE CHE SCROLLA
+function scrollMessage() {
+   // altezza elemento conversazione attiva
+  var heightContainer = $(".contenitore-messaggi.active").height();
+  console.log(heightContainer);
+  // spostiamo scroll container di tutte le conversazioni
+  $("#chat").scrollTop(heightContainer);
 }
 
 // FUNZIONE CHE AGGIUNGE ZERO
