@@ -22,6 +22,13 @@ function sendMessage() {
     var newMessage = $(".template .messaggio-utente").clone();
     console.log(newMessage);
     newMessage.find(".message-left").text(textMessage);
+    //Inserimento data
+    var data = new Date();
+    var hours = addZero(data.getHours());
+    var minutes = addZero(data.getMinutes());
+    var time = hours +':'+ minutes;
+    newMessage.find(".message-time").text(time);
+
     $(".contenitore-messaggi.active").append(newMessage);
     setTimeout(sendResponse, 3000);
   }
@@ -50,4 +57,12 @@ function filter () {
       li[i].style.display = "none";
     }
   }
+}
+
+// FUNZIONE CHE AGGIUNGE ZERO
+function addZero(number) {
+  if(number < 10) {
+    number = '0' + number;
+  }
+  return number;
 }
