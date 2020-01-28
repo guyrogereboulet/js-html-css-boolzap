@@ -2,6 +2,12 @@ $(document).ready (function(){
   $("#invia").click(function (){
     sendMessage();
   });
+  $(".inserimento").keypress(function(event){
+    if (event.which == 13) {
+      sendMessage();
+    }
+  });
+
   $("#contatti ul li").click(function(){
     var conversazione = $(this).attr("data-conversazione");
     var pannelloConversazione = $('.contenitore-messaggi[data-contact="' + conversazione + '"]');
