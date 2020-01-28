@@ -17,7 +17,7 @@ body {
 
 
 .wrapper {
-  width: 60%;
+  width: 70%;
   height: 90%;
   margin: 0 auto;
   background-color: white;
@@ -195,6 +195,21 @@ body {
    height: 70px;
  }
 
+ #contatti  ul li:hover {
+   list-style: none;
+   width: 97%;
+   border-right: 1px solid lightgrey;
+   background-color: lightgrey;
+   height: 70px;
+ }
+
+ #contatti  ul  li:hover p {
+   color: white;
+ }
+
+
+
+
 
  .flex {
    display: flex;
@@ -288,9 +303,25 @@ body {
 }
 
 .message-right {
+  position: relative;
   font-size: 10px;
   margin-left: 5px;
   text-align: right;
+}
+
+.elimina-messaggio {
+  position: absolute;
+  top: 50%;
+  right: 20%;
+  width: 100px;
+  background-color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.elimina-messaggio p {
+  padding: 5px;
 }
 
 .messaggio-interlocutore {
@@ -315,10 +346,10 @@ body {
   align-items: flex-end;
 }
 
-.contenitore-messaggi.active {
-  display: block;
-}
-
 .contenitore-messaggi {
   display: none;
+}
+
+.contenitore-messaggi.active {
+  display: block;
 }

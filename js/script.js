@@ -4,7 +4,7 @@ $(document).ready (function(){
   });
   $("#contatti ul li").click(function(){
     var conversazione = $(this).attr("data-conversazione");
-    var pannelloConversazione = $(".contenitore-messaggi[data-contact=" + conversazione + ']');
+    var pannelloConversazione = $('.contenitore-messaggi[data-contact="' + conversazione + '"]');
     $(".contenitore-messaggi").removeClass("active");
     pannelloConversazione.addClass("active")
   });
@@ -22,7 +22,7 @@ function sendMessage() {
     var newMessage = $(".template .messaggio-utente").clone();
     console.log(newMessage);
     newMessage.find(".message-left").text(textMessage);
-    $("#chat").append(newMessage);
+    $(".contenitore-messaggi.active").append(newMessage);
     setTimeout(sendResponse, 3000);
   }
 }
@@ -31,7 +31,7 @@ function sendMessage() {
  function sendResponse() {
    var messageResponse = $(".template .messaggio-interlocutore").clone();
    messageResponse.find(".message-left").text("ok");
-   $("#chat").append(messageResponse);
+   $(".contenitore-messaggi.active").append(messageResponse);
  }
 
 //FUNZIONE FILTRO DI RICERCA
