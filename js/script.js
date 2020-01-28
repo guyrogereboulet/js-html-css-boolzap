@@ -38,6 +38,12 @@ function sendMessage() {
  function sendResponse() {
    var messageResponse = $(".template .messaggio-interlocutore").clone();
    messageResponse.find(".message-left").text("ok");
+   //Inserimento data
+   var data = new Date();
+   var hours = addZero(data.getHours());
+   var minutes = addZero(data.getMinutes());
+   var time = hours +':'+ minutes;
+   messageResponse.find(".message-time").text(time);
    $(".contenitore-messaggi.active").append(messageResponse);
  }
 
