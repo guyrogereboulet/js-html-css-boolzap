@@ -188,19 +188,20 @@ body {
   height: calc(100% - 180px);
  }
 
+
  .contact-element {
    list-style: none;
-   width: 97%;
-   border-right: 1px solid lightgrey;
+   width: 100%;
+   box-shadow: 0px 0px 2px #F2EAE7;
    background-color: white;
-   height: 70px;
+   height: 80px;
  }
 
  .contact-element.active,
  .contact-element:hover,
  .contact-element:active,
  .contact-element:focus {
-   background-color: grey;
+   background-color: lightgrey;
    cursor: pointer;
  }
 
@@ -212,12 +213,13 @@ body {
  }
 
  .testo  p:last-child {
-   color: lightgrey;
+   color: grey;
+   font-size: 12px;
  }
 
  .ora p {
    font-size: 12px;
-   color: lightgrey;
+   color: grey;
  }
 
 .border-bottom {
