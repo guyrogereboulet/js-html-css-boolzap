@@ -287,7 +287,7 @@ body {
 
 .messaggio-verde {
   padding: 10px;
-  margin: 10px;
+  margin: 50px;
   background-color: #D3F7B8;
   border-radius: 10px;
 }
@@ -305,11 +305,15 @@ body {
   text-align: right;
 }
 
+.elimina-messaggio.active {
+  display: block;
+}
+
 .elimina-messaggio {
   display: none;
   position: absolute;
   top: 50%;
-  right: 20%;
+  right: 5%;
   width: 100px;
   background-color: white;
   padding: 10px;
@@ -317,6 +321,8 @@ body {
   border-radius: 5px;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
+
 
 .elimina-messaggio p {
   padding: 5px;
@@ -342,6 +348,8 @@ body {
 }
 
 
+
+
 .messaggio-interlocutore {
   display: flex;
   flex-direction: column;
@@ -351,7 +359,7 @@ body {
 
 .messaggio-bianco {
   padding: 10px;
-  margin: 10px;
+  margin: 50px;
   background-color: white;
   border-radius: 10px;
 }

@@ -27,6 +27,22 @@ $(document).ready (function(){
 
 
   });
+
+
+  $(document).on('click', '.message-options', function() {
+    // //toggleclass sull'elemento dropdown cliccato
+    $(this).siblings('.elimina-messaggio').toggleClass('active');
+    // //togliamo la classe active ai dropdown di tutti gli altri message-link
+    // $(this).parents('.messaggio-verde').siblings('.messaggio-verde').find('.elimina-messaggio').removeClass('active');
+    $(this).parents('.messaggio-verde, .messaggio-bianco').siblings('.messaggio-verde, .messaggio-bianco').find('.elimina-messaggio').removeClass('active');
+  });
+
+  $(document).on('click', '.message-delete', function() {
+    // $(this).parent().parent().parent().remove();
+    $(this).parents('.messaggio-verde, .messaggio-bianco').remove();
+  });
+
+
 });
 
 
